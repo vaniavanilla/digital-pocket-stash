@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Stash ☆</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">✿ MY STASH</div>
+      <div class="can">💫</div>
+      <p class="can-label">YOUR LITTLE<br>DIGITAL WORLD</p>
+      <nav>
+        <button onclick="showTab('home')">⌂ Home</button>
+        <button onclick="showTab('notes')">✎ Notes</button>
+        <button onclick="showTab('reminders')">◷ Reminders</button>
+        <button onclick="showTab('trinkets')">♡ Trinkets</button>
+        <button onclick="showTab('wishlist')">☆ Wishlist</button>
+      </nav>
+      <div class="side-bottom">MADE WITH ♡<br>dum spiro, spero</div>
+    </aside>
+
+    <main>
+      <header>
+        <span>YOUR DIGITAL DIARY</span>
+        <span>✧ STAY SWAG ✧</span>
+      </header>
+
+      <section class="welcome">
+        <div>
+          <p class="tag">✦ WELCOME TO YOUR SPACE ✦</p>
+          <h1>Hey, stash it all!</h1>
+          <p>Your memories, thoughts & little things in one place.</p>
+        </div>
+        <div class="hero-can">🫙</div>
+      </section>
+
+      <div class="search">
+        <span>⌕</span>
+        <input id="search" placeholder="Search your stash..." oninput="render()">
+      </div>
+
+      <div class="stats">
+        <div>📝 <b id="noteCount">0</b><small>NOTES</small></div>
+        <div>⏰ <b id="reminderCount">0</b><small>REMINDERS</small></div>
+        <div>💿 <b id="trinketCount">0</b><small>TRINKETS</small></div>
+        <div>☆ <b id="wishCount">0</b><small>WISHLIST</small></div>
+      </div>
+
+      <section class="workspace">
+        <div class="section-head">
+          <h2 id="pageTitle">Your little collection ✿</h2>
+          <span>✧ YOUR PERSONAL STASH ✧</span>
+        </div>
+
+        <div class="add-box">
+          <input id="itemTitle" placeholder="Give your item a title...">
+          <textarea id="itemContent" placeholder="Write something..."></textarea>
+          <div class="add-bottom">
+            <input id="itemDate" type="date">
+            <button class="add-btn" onclick="addItem()">+ ADD TO STASH</button>
+          </div>
+        </div>
+
+        <div id="items" class="items"></div>
+      </section>
+
+      <footer>✧ KEEP YOUR LITTLE THINGS SAFE ✧</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
